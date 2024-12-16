@@ -1,0 +1,14 @@
+. Testing Requirements
+•	Functional Testing:
+o	Product Browsing: Test for search accuracy, filter functionality, and load times.
+o	Cart Management: Validate add/remove functions, item quantity updates, and checkout process.
+o	Order Tracking: Confirm update frequency and location accuracy.
+•	Performance Testing:
+o	Load Testing: Verify loading time under 2 seconds.
+o	Scalability: Test app performance with 10,000 simultaneous users.
+•	Security Testing:
+o	Payment Gateway: Test for PCI compliance and data encryption.
+o	Data Security: Simulate data breaches and validate encryption.
+•	Usability Testing:
+o	Test navigation ease for browsing, adding to cart, and checking out.
+o	Confirm accessibility on different screen sizes and OS versions.
