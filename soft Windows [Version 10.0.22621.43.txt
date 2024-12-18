@@ -1,0 +1,150 @@
+soft Windows [Version 10.0.22621.4317]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\HP>  npm install -g newman
+npm warn deprecated har-validator@5.1.5: this library is no longer supported
+npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm warn deprecated @faker-js/faker@5.5.3: Please update to a newer version.
+
+added 120 packages in 37s
+
+10 packages are looking for funding
+  run `npm fund` for details
+npm notice
+npm notice New major version of npm available! 10.9.0 -> 11.0.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.0.0
+npm notice To update run: npm install -g npm@11.0.0
+npm notice
+
+C:\Users\HP>.viminfo C:\Users\HP\Downloads\APITest
+
+C:\Users\HP> cd C:\Users\HP\Downloads\APITest
+
+C:\Users\HP\Downloads\APITest> newman run postman_collection.json -e postman_environment.json
+newman
+
+STSTStudentCourse
+
+□ Get All Todo Entries
+└ Get All Todo Entries
+  GET https://demo.fusio-project.org/index.php/ [200 OK, 1.77kB, 1220ms]
+  √  Status code is 200
+  √  Status code name has string
+  ┌
+  │ {
+  │   apiVersion: '8.3.2.0',
+  │   title: 'Fusio',
+  │   paymentCurrency: 'EUR',
+  │   categories: [ 'authorization', 'backend', 'consumer', 'default'
+  │ m, 'system' ],
+  │   scopes: [ 'default' ],
+  │   links: [
+  │     { rel: 'root', href: 'https://demo.fusio-project.org/' },
+  │     { rel: 'openapi', href: 'https://demo.fusio-project.org/system/generator/sp
+  │ ec-openapi' },
+  │     { rel: 'typeapi', href: 'https://demo.fusio-project.org/system/generator/sp
+  │ ec-typeapi' },
+  │     { rel: 'route', href: 'https://demo.fusio-project.org/system/route' },
+  │     { rel: 'health', href: 'https://demo.fusio-project.org/system/health'
+  │ },
+  │     {
+  │       rel: 'oauth-authorization-server',
+  │       href: 'https://demo.fusio-project.org/system/oauth-authorization-server'
+  │     },
+  │     { rel: 'oauth2', href: 'https://demo.fusio-project.org/authorization/token'
+  │  },
+  │     { rel: 'whoami', href: 'https://demo.fusio-project.org/authorization/whoami
+  │ ' },
+  │     { rel: 'about', href: 'https://www.fusio-project.org' }
+  │   ]
+  │ }
+  └
+
+□ Get All Entries
+└ Get All Entries
+  GET https://demo.fusio-project.org/index.php/ [200 OK, 1.77kB, 227ms]
+  √  Your test title
+  √  verify that categories
+  √  apiVersion
+  √  scopes
+
+□ Get entry per ID
+└ Get entry per ID - Valid ID
+  GET https://demo.fusio-project.org/index.php [200 OK, 1.77kB, 206ms]
+  √  Status code is 200
+  √  paymentCurrency
+  √  Status code name has string
+
+└ Get entry per ID - Invalid ID(params not using TODO ID)
+  GET https://demo.fusio-project.org/ [200 OK, 1.77kB, 206ms]
+  √  Successful POST request
+  √  Status code name has string
+
+□ Get Books
+└ Get All Books
+  GET https://simple-books-api.glitch.me/books [200 OK, 631B, 1320ms]
+  √  Status code is 200
+
+└ Get Books by ID
+  GET https://simple-books-api.glitch.me/books/1 [200 OK, 374B, 359ms]
+  √  verify that current-stock
+  √  verify that price
+  √  Successful POST request
+  √  Response time is less than 1131ms
+
+└ Get Books by Type
+  GET https://simple-books-api.glitch.me/books?type=fiction [200 OK, 497B, 248ms]
+  √  Status code is 200
+  √  Status code name has string
+  ┌
+  │ 'The Midnight Library'
+  └
+  √  search a book name called Viscount Who Loved Me
+
+□ Place a book order
+└ Place a book order - using book ID
+  POST https://simple-books-api.glitch.me//order [404 Not Found, 394B, 341ms]
+
+□ Get an order
+└ Get all orders
+  GET https://simple-books-api.glitch.me/orders/ [401 Unauthorized, 255B, 257ms]
+
+└ Get an order - using orderID
+  GET https://simple-books-api.glitch.me/:orderId [404 Not Found, 396B, 264ms]
+
+□ Update an order
+└ Update an order
+  POST https://simple-books-api.glitch.me/orders/ [401 Unauthorized, 255B, 351ms]
+
+□ Delete an order
+└ Delete an order
+  DELETE https://simple-books-api.glitch.me/orders/rObASEWYlVrRX6cTAEgbt [401 Unauthorized, 255B, 255ms]
+
+→ Register API Client
+  POST https://simple-books-api.glitch.me/api-clients/ [409 Conflict, 283B, 264ms]
+
+→ Get API Status
+  GET https://simple-books-api.glitch.me/status [200 OK, 226B, 332ms]
+  √  Status code is 200
+
+┌─────────────────────────┬─────────────────────┬─────────────────────┐
+│                         │            executed │              failed │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              iterations │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│                requests │                  14 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│            test-scripts │                  14 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│      prerequest-scripts │                   0 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              assertions │                  20 │                   0 │
+├─────────────────────────┴─────────────────────┴─────────────────────┤
+│ total run duration: 7.4s                                            │
+├─────────────────────────────────────────────────────────────────────┤
+│ total data received: 6.99kB (approx)                                │
+├─────────────────────────────────────────────────────────────────────┤
+│ average response time: 417ms [min: 206ms, max: 1320ms, s.d.: 351ms] │
+└─────────────────────────────────────────────────────────────────────┘
+
+C:\Users\HP\Downloads\APITest>
