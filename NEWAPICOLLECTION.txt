@@ -1,0 +1,52 @@
+
+NEW API
+
+→ Newest Request
+  GET https://reqres.in/api/unknown [200 OK, 1.92kB, 878ms]
+  ┌
+  │ 4
+  │ 'fuchsia rose'
+  └
+  1. Response time is less than 200ms
+  √  Status code is 200
+  √  confirm that the total_Pages value is 2
+  √  confirm that the total value is 12
+  √  confirm that the data id value is 4
+  √  confirm that the data id value is 2
+  √  confirm that the data name is fuchsia rose
+  √  Body matches string
+  √  Successful POST request
+  √  confirm that total_pages is present
+  2. Content-Type is present
+
+┌─────────────────────────┬────────────────────┬───────────────────┐
+│                         │           executed │            failed │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              iterations │                  1 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│                requests │                  1 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│            test-scripts │                  1 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│      prerequest-scripts │                  0 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              assertions │                 11 │                 2 │
+├─────────────────────────┴────────────────────┴───────────────────┤
+│ total run duration: 1303ms                                       │
+├──────────────────────────────────────────────────────────────────┤
+│ total data received: 763B (approx)                               │
+├──────────────────────────────────────────────────────────────────┤
+│ average response time: 878ms [min: 878ms, max: 878ms, s.d.: 0µs] │
+└──────────────────────────────────────────────────────────────────┘
+
+  #  failure                detail
+
+ 1.  AssertionError         Response time is less than 200ms
+                            expected 878 to be below 564
+                            at assertion:1 in test-script
+                            inside "Newest Request"
+
+ 2.  AssertionError         Content-Type is present
+                            expected response to have header with key 'application/json; charset=utf-8'
+                            at assertion:10 in test-script
+                            inside "Newest Request"
